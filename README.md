@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-![Portfolio Preview](assets/images/hero_preview.png)
+![Portfolio Preview](assets/images/hero-preview.png)
 
 ## Overview
 
