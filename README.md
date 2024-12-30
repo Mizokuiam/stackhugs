@@ -1,36 +1,65 @@
-# My Portfolio Website
+# StackHugs Portfolio
 
 ![Portfolio Preview](assets/images/hero-preview.png)
 
-## Overview
-
-A modern, responsive portfolio website showcasing my work as a Full-Stack Developer & DevOps Engineer. Built with a sleek glass-morphism design, the website features a dynamic dark/light mode and smooth animations.
+A modern, responsive portfolio website showcasing my work as a Full-Stack Developer & DevOps Engineer. Features a sleek glass-morphism design with dark/light mode compatibility.
 
 ## Features
 
 - 🎨 Modern Glass-morphism Design
 - 🌓 Dark/Light Mode Toggle
 - 📱 Fully Responsive Layout
-- ✨ Smooth Animations & Transitions
-- 🖼️ Project Showcase
-- 💻 Skills Visualization
-- 📫 Contact Section
+- ⚡ Optimized Performance
+- 🔍 SEO Optimized
+- 🖼️ Interactive Project Cards
+- 🚀 Smooth Animations
+
+## Recent Updates
+
+### Project Section Enhancement (December 30, 2024)
+- Added hover effects to project cards
+- Project descriptions now appear on hover with smooth transitions
+- Improved project tags and links display
+- Enhanced visual feedback on interactions
+
+### Performance Optimization (December 30, 2024)
+- Implemented WebP image format with PNG fallback
+- Added image lazy loading and async decoding
+- Optimized critical asset loading
+- Added preload directives for essential resources
+
+### SEO Improvements (December 30, 2024)
+- Added comprehensive meta tags
+- Implemented Open Graph protocol for better social sharing
+- Added Twitter Card meta tags
+- Enhanced semantic HTML structure
 
 ## Technologies Used
 
 - HTML5
-- CSS3 (Custom Properties, Flexbox, Grid)
-- JavaScript (ES6+)
-- CSS Glass-morphism Effects
-- Responsive Design Principles
+- CSS3
+- JavaScript
+- Node.js (for image optimization)
 
-## Design Features
+## Development Tools
 
-- **Glass-morphism Effects**: Modern, translucent UI elements with subtle blur effects
-- **Dynamic Gradients**: Smooth color transitions and overlays
-- **Responsive Grid**: Fluid layouts that adapt to any screen size
-- **Custom Animations**: Subtle hover effects and smooth transitions
-- **Optimized Images**: Fast-loading, high-quality visuals
+- Sharp (for image optimization)
+- Git (version control)
+- VS Code
+
+## Image Optimization
+
+The project includes an image optimization script (`optimize-images.js`) that converts images to the WebP format for better performance. To use it:
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Run the optimization script:
+   ```bash
+   node optimize-images.js
+   ```
 
 ## Project Structure
 
@@ -42,52 +71,38 @@ stackhugs/
 │   ├── js/
 │   │   └── script.js
 │   └── images/
-│       └── pro_image.png
+│       ├── hero-preview.png
+│       ├── pro_image.png
+│       └── pro_image.webp
 ├── index.html
+├── package.json
+├── optimize-images.js
 └── README.md
 ```
 
-## Sections
+## Setup and Development
 
-1. **Hero Section**: Professional introduction with a striking visual presence
-2. **Skills**: Technical expertise showcased through an interactive grid
-3. **Projects**: Portfolio of work with detailed descriptions
-4. **Contact**: Multiple ways to get in touch
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Mizokuiam/stackhugs.git
+   ```
 
-## Performance Optimizations
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- Lazy loading of images
-- Optimized CSS animations
-- Efficient asset loading
-- Smooth scrolling implementation
-
-## Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/Mizokuiam/stackhugs.git
-
-# Navigate to the project directory
-cd stackhugs
-
-# Open index.html in your browser
-```
-
-## Live Demo
-
-Visit the live website: [https://mizokuiam.github.io/stackhugs/](https://mizokuiam.github.io/stackhugs/)
+3. Open `index.html` in your browser to view the site.
 
 ## Contributing
 
-Feel free to fork this project and submit pull requests for any improvements.
+Feel free to submit issues and enhancement requests!
 
 ## License
 
-MIT License - feel free to use this code for your own portfolio!
+This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## Contact
 
-For any questions or collaboration opportunities, feel free to reach out through the contact section on the website.
-
----
- 2024 StackHugs. Crafted with precision and passion.
+- Website: [stackhugs.com](https://mizokuiam.github.io/stackhugs/)
+- GitHub: [@Mizokuiam](https://github.com/Mizokuiam)
