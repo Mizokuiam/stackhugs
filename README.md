@@ -1,6 +1,6 @@
-# Modern Portfolio Website
+# My Portfolio Website
 
-![Portfolio Preview](screenshot.png)
+![Portfolio Preview](./hero-preview.png)
 
 ## Overview
 
@@ -75,4 +75,4 @@ MIT License - feel free to use this code for your own portfolio!
 For any questions or collaboration opportunities, feel free to reach out through the contact section on the website.
 
 ---
-© 2024 StackHugs. Crafted with precision and passion.
+ 2024 StackHugs. Crafted with precision and passion.
