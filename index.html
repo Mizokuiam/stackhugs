@@ -3,7 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
     <title>StackHugs - Full-Stack & DevOps Portfolio</title>
+    <meta name="description" content="Professional portfolio of a Full-Stack Developer & DevOps Engineer, showcasing expertise in modern web development, cloud solutions, and automation.">
+    <meta name="keywords" content="Full-Stack Developer, DevOps Engineer, Web Development, Cloud Computing, Portfolio">
+    <meta name="author" content="StackHugs">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="StackHugs - Full-Stack & DevOps Portfolio">
+    <meta property="og:description" content="Professional portfolio showcasing Full-Stack Development & DevOps expertise">
+    <meta property="og:image" content="assets/images/hero-preview.png">
+    <meta property="og:url" content="https://mizokuiam.github.io/stackhugs/">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@MrMizoku">
+    <meta name="twitter:title" content="StackHugs - Full-Stack & DevOps Portfolio">
+    <meta name="twitter:description" content="Professional portfolio showcasing Full-Stack Development & DevOps expertise">
+    <meta name="twitter:image" content="assets/images/hero-preview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="assets/images/pro_image.png" as="image">
+    <link rel="preload" href="assets/css/styles.css" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" as="style">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +76,18 @@
             </div>
         </div>
         <div class="hero-image-wrapper">
-            <img src="assets/images/pro_image.png" alt="Professional Portrait" class="hero-image" loading="lazy">
+            <picture>
+                <source srcset="assets/images/pro_image.webp" type="image/webp">
+                <img 
+                    src="assets/images/pro_image.png" 
+                    alt="Professional Portrait" 
+                    class="hero-image" 
+                    width="800"
+                    height="1000"
+                    fetchpriority="high"
+                    decoding="async"
+                >
+            </picture>
         </div>
     </section>
 
