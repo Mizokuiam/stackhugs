@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-![Portfolio Preview](./hero-preview.png)
+![Portfolio Preview](assets/images/pro_image.png)
 
 ## Overview
 
@@ -31,6 +31,21 @@ A modern, responsive portfolio website showcasing my work as a Full-Stack Develo
 - **Responsive Grid**: Fluid layouts that adapt to any screen size
 - **Custom Animations**: Subtle hover effects and smooth transitions
 - **Optimized Images**: Fast-loading, high-quality visuals
+
+## Project Structure
+
+```
+stackhugs/
+├── assets/
+│   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── script.js
+│   └── images/
+│       └── pro_image.png
+├── index.html
+└── README.md
+```
 
 ## Sections
 
