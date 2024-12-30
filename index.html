@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackHugs - Full-Stack & DevOps Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">StackHugs</div>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <button class="theme-toggle" aria-label="Toggle theme">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+        <div class="menu-btn">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="Full-Stack Developer">Full-Stack Developer</h1>
+            <h2 class="subtitle">&amp; DevOps Engineer</h2>
+            <p class="description">Crafting digital experiences through code and infrastructure</p>
+            <div class="cta-buttons">
+                <a href="#projects" class="cta-primary">
+                    <i class="fas fa-rocket"></i>
+                    <span>View Projects</span>
+                </a>
+                <a href="#contact" class="cta-secondary">
+                    <i class="fas fa-paper-plane"></i>
+                    <span>Get in Touch</span>
+                </a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="pro_image.png" alt="Professional Portrait" class="hero-image" loading="lazy">
+        </div>
+    </section>
+
+    <section id="skills" class="section skills-section">
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>Frontend Development</h3>
+                <div class="skill-items">
+                    <div class="skill-item" title="HTML5/CSS3">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <div class="skill-item" title="JavaScript">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="skill-item" title="React.js">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="skill-item" title="Vue.js">
+                        <i class="fab fa-vuejs"></i>
+                    </div>
+                    <div class="skill-item" title="Responsive Design">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Backend Development</h3>
+                <div class="skill-items">
+                    <div class="skill-item" title="Node.js">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="skill-item" title="Python">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="skill-item" title="Java">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <div class="skill-item" title="RESTful APIs">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div class="skill-item" title="GraphQL">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>DevOps & Infrastructure</h3>
+                <div class="skill-items">
+                    <div class="skill-item" title="Docker">
+                        <i class="fab fa-docker"></i>
+                    </div>
+                    <div class="skill-item" title="Kubernetes">
+                        <i class="fas fa-dharmachakra"></i>
+                    </div>
+                    <div class="skill-item" title="CI/CD">
+                        <i class="fas fa-infinity"></i>
+                    </div>
+                    <div class="skill-item" title="AWS">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <div class="skill-item" title="Infrastructure as Code">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects-section">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Nexonode</h3>
+                    <p>AI-powered coding companion that enhances your development workflow with intelligent automation and code generation.</p>
+                    <div class="project-tech">
+                        <span>AI</span>
+                        <span>VS Code</span>
+                        <span>Automation</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://mizokuiam.github.io/Nexonode/" target="_blank" class="project-link">
+                            <i class="fas fa-globe"></i> Website
+                        </a>
+                        <a href="https://github.com/Mizokuiam/Nexonode.git" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://marketplace.visualstudio.com/items?itemName=mizokuiam.nexonode" target="_blank" class="marketplace-link">
+                            <i class="fas fa-store"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-content">
+                    <h3>Aurora Theme</h3>
+                    <p>A premium theme collection for modern development environments, featuring carefully crafted color schemes inspired by natural phenomena and sleek design principles.</p>
+                    <div class="project-tech">
+                        <span>Theme</span>
+                        <span>Design</span>
+                        <span>VS Code</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://mizokuiam.github.io/aurora-theme/" target="_blank" class="project-link">
+                            <i class="fas fa-globe"></i> Website
+                        </a>
+                        <a href="https://github.com/Mizokuiam/aurora-theme" target="_blank" class="github-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://marketplace.visualstudio.com/items?itemName=mizokuiam.aurora-theme-pro" target="_blank" class="marketplace-link">
+                            <i class="fas fa-store"></i>
+                        </a>
+                        <a href="https://mrmizoku.gumroad.com/l/aurora-theme-team" target="_blank" class="gumroad-link">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section footer-section">
+        <div class="footer-content">
+            <div class="footer-header">
+                <h2 class="section-title">Let's Connect</h2>
+                <p>Ready to collaborate or discuss opportunities? Let's create something amazing together.</p>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/Mizokuiam" target="_blank" class="social-link github" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://x.com/MrMizoku" target="_blank" class="social-link twitter" title="X (Twitter)">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 StackHugs. Crafted with precision and passion.</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
