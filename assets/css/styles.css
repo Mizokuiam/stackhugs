@@ -39,39 +39,32 @@
 
 /* Hero Section */
 .hero-section {
-    --gradient-angle: 135deg;
-    min-height: 100vh;
+    position: relative;
     display: flex;
     align-items: center;
-    padding: 120px 5% 60px;
-    position: relative;
+    justify-content: space-between;
+    min-height: 100vh;
+    padding: 120px 5% 40px;
     overflow: hidden;
-    background: linear-gradient(
-        var(--gradient-angle),
-        var(--bg-primary),
-        rgba(var(--bg-rgb), 0.95)
-    );
 }
 
 .hero-content {
     position: relative;
     z-index: 2;
     max-width: 600px;
-    padding: 2.5rem;
+    padding: 2rem;
     border-radius: 20px;
     background: rgba(var(--bg-rgb), 0.01);
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
     border: 1px solid rgba(var(--text-rgb), 0.05);
 }
 
 .hero-image-wrapper {
-    position: absolute;
-    top: 50%;
-    right: 0;
+    position: relative;
     width: 45%;
-    height: 90vh;
-    transform: translateY(-50%);
-    z-index: 1;
+    height: calc(100vh - 140px);
+    max-height: 800px;
+    border-radius: 30px;
     overflow: hidden;
 }
 
@@ -80,6 +73,7 @@
     height: 100%;
     object-fit: cover;
     object-position: center;
+    border-radius: 30px;
     filter: contrast(1.1) brightness(0.9);
 }
 
@@ -114,9 +108,10 @@
 /* Mobile Responsive Adjustments for Hero */
 @media (max-width: 768px) {
     .hero-section {
+        padding-top: 100px;
+        min-height: auto;
         flex-direction: column;
         text-align: center;
-        padding: 100px 5% 40px;
     }
 
     .hero-content {
@@ -128,11 +123,9 @@
     .hero-image-wrapper {
         position: relative;
         width: 80%;
-        height: 50vh;
+        height: 60vh;
         margin: 2rem auto;
-        transform: none;
-        top: 0;
-        border-radius: 20px;
+        max-height: 600px;
     }
 
     .hero-image {
@@ -153,7 +146,7 @@
 @media (max-width: 480px) {
     .hero-image-wrapper {
         width: 90%;
-        height: 40vh;
+        height: 50vh;
     }
 }
 
@@ -278,30 +271,6 @@
     color: var(--text-primary);
 }
 
-.project-description {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(var(--bg-rgb), 0.95);
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 15px;
-    z-index: 10;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    overflow-y: auto;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.project-card:hover .project-description {
-    display: block;
-    animation: fadeIn 0.3s ease forwards;
-}
-
 .project-tech {
     display: flex;
     flex-wrap: wrap;
@@ -326,11 +295,10 @@
 }
 
 .project-links {
+    margin-top: auto;
     display: flex;
     flex-wrap: wrap;
     gap: 1.2rem;
-    margin-top: auto;
-    padding-top: 1.5rem;
 }
 
 .project-links a {
@@ -354,38 +322,12 @@
     font-size: 1.2rem;
 }
 
+.marketplace-link { color: #0098FF !important; }
+.gumroad-link { color: #FF90E8 !important; }
+.github-link { color: var(--text-primary) !important; }
+
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
-    .container {
-        padding: 1rem;
-    }
-
-    .hero-section {
-        flex-direction: column-reverse;
-        text-align: center;
-        padding: 2rem 0;
-    }
-
-    .hero-content {
-        margin-right: 0;
-        margin-top: 2rem;
-    }
-
-    .hero-image-wrapper {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .hero-image {
-        width: 100%;
-        height: auto;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
     .projects-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -403,24 +345,6 @@
         font-size: 1.5rem;
     }
 
-    .project-description {
-        position: static;
-        display: none;
-        margin-top: 1rem;
-        padding: 1rem 0;
-        background: none;
-        box-shadow: none;
-        animation: none;
-    }
-
-    .project-card:hover {
-        transform: none;
-    }
-
-    .project-card:hover .project-description {
-        display: block;
-    }
-
     .project-tech {
         gap: 0.5rem;
         margin: 1rem 0;
@@ -433,7 +357,6 @@
 
     .project-links {
         gap: 1rem;
-        flex-wrap: wrap;
     }
 
     .project-links a {
@@ -443,26 +366,6 @@
 
 /* Small phones */
 @media (max-width: 480px) {
-    .container {
-        padding: 0.8rem;
-    }
-
-    .hero-content h1 {
-        font-size: 2rem;
-    }
-
-    .hero-content p {
-        font-size: 1rem;
-    }
-
-    .hero-image-wrapper {
-        max-width: 250px;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
     .project-content {
         padding: 1.2rem;
     }
@@ -481,7 +384,7 @@
     }
 }
 
-/* Contact Section */
+/* Footer/Contact Section */
 .footer-section {
     --gradient-angle: -135deg;
 }
@@ -725,9 +628,44 @@ body {
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-family: monospace;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-primary);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.logo-eyes {
+    font-family: monospace;
+    margin-right: 0.5rem;
+    display: inline-block;
+    color: var(--text-primary);
+    animation: blink 4s infinite;
+    font-weight: 700;
+    letter-spacing: -1px;
+    opacity: 0.9;
+}
+
+@keyframes blink {
+    0%, 95%, 98% {
+        opacity: 0.9;
+        transform: scaleY(1);
+    }
+    96%, 97% {
+        opacity: 0.3;
+        transform: scaleY(0.1);
+    }
+}
+
+.logo:hover .logo-eyes {
+    animation: blink 2s infinite;
+}
+
+.logo:hover {
+    opacity: 0.9;
 }
 
 .nav-links {
@@ -1133,10 +1071,6 @@ body {
         padding: 1.5rem;
     }
 
-    .skill-category h3 {
-        font-size: 1.2rem;
-    }
-
     .footer-content {
         padding: 2rem;
     }
@@ -1218,39 +1152,6 @@ body {
     transition: all 0.3s ease;
 }
 
-.project-description {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    background: rgba(var(--bg-rgb), 0.95);
-    backdrop-filter: blur(10px);
-    padding: 2rem;
-    border-radius: 15px;
-    z-index: 10;
-    color: var(--text-secondary);
-    line-height: 1.6;
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
-}
-
-.project-card:hover .project-description {
-    display: block;
-    animation: fadeIn 0.3s ease forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .project-tech {
     display: flex;
     flex-wrap: wrap;
@@ -1275,9 +1176,10 @@ body {
 }
 
 .project-links {
+    margin-top: auto;
     display: flex;
+    flex-wrap: wrap;
     gap: 1.2rem;
-    margin-top: 1.5rem;
 }
 
 .project-links a {
@@ -1304,25 +1206,7 @@ body {
 .gumroad-link { color: #FF90E8 !important; }
 .github-link { color: var(--text-primary) !important; }
 
-/* Project card hover effects */
-.project-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        rgba(var(--text-rgb), 0.03),
-        transparent
-    );
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.project-card:hover::before {
-    opacity: 1;
-}
-
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
     .project-description {
         position: static;
@@ -1331,6 +1215,10 @@ body {
         padding: 1rem 0;
         background: none;
         box-shadow: none;
+    }
+
+    .project-card:hover {
+        transform: none;
     }
 
     .project-card:hover .project-description {
@@ -1434,10 +1322,6 @@ body {
         padding: 2rem;
     }
 
-    .skill-category h3 {
-        font-size: 1.5rem;
-    }
-
     .footer-content {
         padding: 2rem;
     }
@@ -1496,35 +1380,16 @@ body {
 
 @media (max-width: 768px) {
     .hero-section {
-        padding: 100px 5% 40px;
-        flex-direction: column;
+        padding-top: 100px;
         text-align: center;
     }
 
-    .hero-content {
-        width: 100%;
-        max-width: 100%;
-        margin-bottom: 2rem;
+    .hero-content h1 {
+        font-size: 2.5rem;
     }
 
-    .hero-image-wrapper {
-        position: relative;
-        width: 80%;
-        height: 50vh;
-        margin: 2rem auto;
-        transform: none;
-        top: 0;
-        border-radius: 20px;
-    }
-
-    .hero-image-wrapper::before {
-        background: linear-gradient(
-            180deg,
-            var(--bg-primary) 0%,
-            transparent 20%,
-            transparent 80%,
-            var(--bg-primary) 100%
-        );
+    .hero-content .subtitle {
+        font-size: 1.8rem;
     }
 
     .projects-grid {
