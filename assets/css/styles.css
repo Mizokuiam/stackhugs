@@ -240,9 +240,8 @@
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .project-card {
@@ -254,6 +253,9 @@
     border-radius: 15px;
     overflow: hidden;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-card:hover {
@@ -265,6 +267,9 @@
 .project-content {
     position: relative;
     padding: 2rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .project-content h3 {
@@ -279,6 +284,7 @@
     top: 0;
     left: 0;
     right: 0;
+    bottom: 0;
     background: rgba(var(--bg-rgb), 0.95);
     backdrop-filter: blur(10px);
     padding: 2rem;
@@ -286,6 +292,7 @@
     z-index: 10;
     color: var(--text-secondary);
     line-height: 1.6;
+    overflow-y: auto;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
@@ -293,17 +300,6 @@
 .project-card:hover .project-description {
     display: block;
     animation: fadeIn 0.3s ease forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .project-tech {
@@ -331,8 +327,10 @@
 
 .project-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 1.2rem;
-    margin-top: 1.5rem;
+    margin-top: auto;
+    padding-top: 1.5rem;
 }
 
 .project-links a {
@@ -344,6 +342,7 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    white-space: nowrap;
 }
 
 .project-links a:hover {
@@ -355,30 +354,55 @@
     font-size: 1.2rem;
 }
 
-.marketplace-link { color: #0098FF !important; }
-.gumroad-link { color: #FF90E8 !important; }
-.github-link { color: var(--text-primary) !important; }
-
-/* Project card hover effects */
-.project-card::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        45deg,
-        transparent,
-        rgba(var(--text-rgb), 0.03),
-        transparent
-    );
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.project-card:hover::before {
-    opacity: 1;
-}
-
+/* Mobile Responsiveness */
 @media (max-width: 768px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 2rem 0;
+    }
+
+    .hero-content {
+        margin-right: 0;
+        margin-top: 2rem;
+    }
+
+    .hero-image-wrapper {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        min-height: auto;
+    }
+
+    .project-content {
+        padding: 1.5rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.5rem;
+    }
+
     .project-description {
         position: static;
         display: none;
@@ -386,10 +410,74 @@
         padding: 1rem 0;
         background: none;
         box-shadow: none;
+        animation: none;
+    }
+
+    .project-card:hover {
+        transform: none;
     }
 
     .project-card:hover .project-description {
         display: block;
+    }
+
+    .project-tech {
+        gap: 0.5rem;
+        margin: 1rem 0;
+    }
+
+    .project-tech span {
+        font-size: 0.8rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .project-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    .project-links a {
+        font-size: 1rem;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+    .container {
+        padding: 0.8rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-image-wrapper {
+        max-width: 250px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .project-content {
+        padding: 1.2rem;
+    }
+
+    .project-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .project-tech span {
+        font-size: 0.75rem;
+        padding: 0.25rem 0.7rem;
+    }
+
+    .project-links a {
+        font-size: 0.9rem;
     }
 }
 
@@ -1591,6 +1679,18 @@ body {
 
     .projects-grid {
         grid-template-columns: 1fr;
+    }
+
+    .skills-container {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        padding: 2rem;
+    }
+
+    .social-links {
+        gap: 1rem;
     }
 }
 
