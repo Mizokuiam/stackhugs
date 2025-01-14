@@ -1,3 +1,8 @@
+![GitHub stars](https://img.shields.io/github/stars/Mizokuiam/stackhugs)
+![GitHub forks](https://img.shields.io/github/forks/Mizokuiam/stackhugs)
+![GitHub issues](https://img.shields.io/github/issues/Mizokuiam/stackhugs)
+![GitHub license](https://img.shields.io/github/license/Mizokuiam/stackhugs)
+
 # StackHugs Portfolio
 
 ![Portfolio Preview](assets/images/hero-preview.png)
